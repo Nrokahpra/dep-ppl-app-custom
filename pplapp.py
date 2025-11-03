@@ -51,7 +51,6 @@ class Pplapp:
 
     async def natsDisconnect(self):
         try:
-            await self.sendMessageAsync("request", "cancelTask", "reportMeasurements(all,1)", "")
             await self.connection.close()
         except Exception as e:
             print(f"Error disconnecting from NATS server: {e}")
